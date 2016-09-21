@@ -1,0 +1,87 @@
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+#grid_container {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%; /* for optical centering */
+	margin-top: -50px;
+	margin-left: -100px;
+}
+
+.mono {
+	font-family: 'Fjalla One';
+	font-size: 6em;
+	float: left;
+	margin-left: 5px;
+}
+
+@-webkit-keyframes l_move {
+	0%,100% {left: 0px; color: black;}
+	 50% {left: 125px; color: yellow;} 
+}
+
+#l {
+	-webkit-animation: l_move 2s infinite;
+	position: relative;
+}
+
+@-webkit-keyframes i_move {
+
+	0%,100% {left: 0px; color: black;}
+	 50% {left: 50px; color: yellow;} 
+
+}
+
+#i {
+	position: relative;
+	-webkit-animation: i_move 2s infinite ease;
+}
+
+@-webkit-keyframes v_move {
+	0%,100% {right: 0px; color: black;}
+	 50% {right: 40px; color: yellow;} 
+
+}
+
+#v {
+	position: relative;;
+	-webkit-animation: v_move 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes e_move {
+
+	0%,100% {right: 0px; color: black;}
+	 50% {right: 140px; color: yellow;} 
+}
+
+#e {
+	position: relative;
+	-webkit-animation: e_move 2s ease infinite;
+}
+
+@-webkit-keyframes rotate {
+	0% { -webkit-transform: rotate(0deg);}
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+#square {
+	width: 0;
+	height: 0;
+	border-top: 200px solid transparent;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 250px solid green;
+	position: fixed;
+	left: 320px;
+	top: 225px;
+	z-index: -1;
+
+
+	transform-origin: 50% 50%;
+	-webkit-animation: rotate 9s infinite linear;
+}
